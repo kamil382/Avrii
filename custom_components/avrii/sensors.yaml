@@ -1,0 +1,1444 @@
+#  - name: "Total Energy Decimals"
+#    address: 4172
+#    data_type: uint16
+#    unit_of_measurement: Wh
+
+
+  - name: "ENERGY Total Load Energy"
+    unique_id: avrii_total_load_energy
+    slave: 1
+    address: 4880        # 0x1310
+    input_type: holding
+    data_type: uint32
+    count: 2
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+    scale: 0.01
+
+
+  - name: "ENERGY Total PV Energy"
+    unique_id: avrii_total_pv_energy
+    slave: 1
+    address: 4129        # 0x1021
+    input_type: holding
+    data_type: uint32
+    count: 2
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+    scale: 1
+    precision: 2
+
+
+  - name: "ENERGY Total Grid Import Energy"
+    unique_id: avrii_total_grid_import_energy
+    slave: 1
+    address: 4870        # 0x1306
+    input_type: holding
+    data_type: uint32
+    count: 2
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+    scale: 0.01
+
+
+  - name: "ENERGY Total Grid Export Energy"
+    unique_id: avrii_total_grid_export_energy
+    slave: 1
+    address: 4872        # 0x1308
+    input_type: holding
+    data_type: uint32
+    count: 2
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+    scale: 0.01
+
+
+  - name: "ENERGY Total Battery Charge Energy"
+    unique_id: avrii_total_battery_charge_energy
+    slave: 1
+    address: 8205        # 0x200D
+    input_type: holding
+    data_type: uint32
+    count: 2
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+    scale: 0.01
+    precision: 2
+
+  - name: "ENERGY Total Battery Discharge Energy"
+    unique_id: avrii_total_battery_discharge_energy
+    slave: 1
+    address: 8209        # 0x2011
+    input_type: holding
+    data_type: uint32
+    count: 2
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+    scale: 0.01
+
+
+
+
+  - name: "Maksymalna moc oddawania do sieci"
+    unique_id: avrii_max_feed_in_power_sensor
+    slave: 1
+    address: 12473        # 0x30B9
+    input_type: holding
+    data_type: uint32
+    count: 2
+    unit_of_measurement: W
+    device_class: power
+    state_class: measurement
+
+
+
+
+
+  - name: "Status systemu raw"
+    unique_id: status_systemu_raw
+    slave: 1
+    address: 4170
+    input_type: holding
+    data_type: uint16
+    
+    
+    
+  - name: "Stan inwertera"
+    unique_id: "stan_inwertera"
+    slave: 1
+    address: 4125
+    input_type: holding
+    data_type: uint16
+    
+  - name: "maksymalne ładowanie z sieci_A"
+    unique_id: "maksymalne_ladowanie_z_sieci_A"
+    slave: 1
+    address: 8481
+    input_type: holding
+    data_type: uint16
+
+
+  - name: "maksymalne ładowanie z sieci"
+    unique_id: "maksymalne_ladowanie_z_sieci"
+    slave: 1
+    address: 8485
+    input_type: holding
+    data_type: uint16
+
+
+
+  - name: "ladowanie baterii max"
+    unique_id: "ladowanie_baterii_max"
+    slave: 1
+    address: 8472
+    input_type: holding
+    data_type: uint16
+
+  - name: "Pojemność końca rozładowania"
+    unique_id: "Pojemnosc_koncowa_rozladowania"
+    slave: 1
+    address: 8475
+    input_type: holding
+    data_type: uint16
+
+
+  - name: "Tryb pracy"
+    unique_id: "tryb_pracy_sensor"
+    slave: 1
+    address: 8448
+    input_type: holding
+    data_type: uint16
+
+
+
+  - name: "ladowanie z sieci"
+    unique_id: "ladowanie_z_sieci"
+    slave: 1
+    address: 8469
+    input_type: holding
+    data_type: uint16
+    
+  - name: "Maximum Grid Charge Power"
+    unique_id: "maximum_grid_charge_power"
+    slave: 1
+    address: 8470
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "W"
+    device_class: power
+
+
+
+
+  - name: "Force Charge Start SOC"
+    unique_id: "force_charge_start_soc"
+    slave: 1
+    address: 8516
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "%"
+    device_class: battery
+#        scan_interval: 1
+
+  - name: "Force Charge End SOC"
+    unique_id: "force_charge_end_soc"
+    slave: 1
+    address: 8517
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "%"
+    device_class: battery
+#        scan_interval: 1
+    
+    
+    
+  - name: "Force Charge Start Voltage"
+    unique_id: "force_charge_start_voltage"
+    slave: 1
+    address: 8518
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    unit_of_measurement: "V"
+    device_class: voltage
+#        scan_interval: 1
+
+  - name: "Force Charge End Voltage"
+    unique_id: "force_charge_end_voltage"
+    slave: 1
+    address: 8519
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    unit_of_measurement: "V"
+    device_class: voltage
+#        scan_interval: 1
+    
+    
+  - name: "Battery Voltage of Grid Charge End"
+    unique_id: "battery_voltage_grid_charge_end"
+    slave: 1
+    address: 8520
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    unit_of_measurement: "V"
+    device_class: voltage
+#        scan_interval: 1
+
+  - name: "Maximum Grid Forced Charge Power"
+    unique_id: "maximum_grid_forced_charge_power"
+    slave: 1
+    address: 8528
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "W"
+    device_class: power
+#        scan_interval: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#      - name: "Device Model Name"
+#        unique_id: "modbus_device_model_name"
+#        slave: 1
+#        address: 0x1A00
+#        count: 8
+#        input_type: holding
+#        data_type: string
+  
+  
+
+#      - name: "Device Serial Number"
+#        unique_id: "modbus_device_serial_number"
+#        slave: 1
+#        address: 0x1A10
+#        count: 8
+#        input_type: holding
+#        data_type: string
+    
+    
+#      - name: "Master Firmware Version"
+#        unique_id: "modbus_master_firmware_version"
+#        slave: 1
+#        address: 0x1A1C
+#        count: 3
+#        input_type: holding
+#        data_type: string
+    
+
+#      - name: "Slave Firmware Version"
+#        slave: 1
+#        address: 0x1A26
+#        count: 3
+#        input_type: holding
+#        data_type: string
+    
+
+#      - name: "MPPT Number"
+#        slave: 1
+#        address: 0x1A3B
+#        input_type: holding
+#        data_type: uint16
+    
+
+#      - name: "Nominal Voltage"
+#        slave: 1
+#        address: 0x1A44
+#        input_type: holding
+#        data_type: uint16
+#        scale: 0.1
+#        unit_of_measurement: "V"
+#        device_class: voltage
+
+#      - name: "Nominal Frequency"
+#        slave: 1
+#        address: 0x1A45
+#        input_type: holding
+#        data_type: uint16
+#        scale: 0.01
+#        unit_of_measurement: "Hz"
+#        device_class: frequency
+
+#      - name: "Nominal Active Power Low Word"
+#        slave: 1
+#        address: 0x1A46
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "W"
+#        device_class: power
+
+#      - name: "Nominal Active Power High Word"
+#        slave: 1
+#        address: 0x1A4E
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "W"
+#        device_class: power
+#        scan_interval: 1
+
+#      - name: "Grid Phase Number"
+#        slave: 1
+#        address: 0x1A48
+#        input_type: holding
+#        data_type: uint16
+    
+#      - name: "Production Type"
+#        slave: 1
+#        address: 0x1A5A
+#        input_type: holding
+#        data_type: uint16
+    
+
+#      - name: "EMS Firmware Version"
+#        slave: 1
+#        address: 0x1A60
+#        count: 3
+#        input_type: holding
+#        data_type: string
+    
+
+#     - name: "DCDC Firmware Version"
+#       slave: 1
+#       address: 0x1A6F
+#       count: 3
+#       input_type: holding
+#       data_type: string
+    
+
+#      - name: "Model Name Extend"
+#        slave: 1
+#        address: 0x1B10
+#        count: 8
+#        input_type: holding
+#        data_type: string
+    
+
+#      - name: "Serial Number Extend"
+#        slave: 1
+#        address: 0x1B20
+#        count: 8
+#        input_type: holding
+#        data_type: string
+    
+
+
+  - name: "L1 Voltage"
+    slave: 1
+    address: 0x1001
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    unit_of_measurement: "V"
+    device_class: voltage
+
+  - name: "L1 Current"
+    slave: 1
+    address: 0x1002
+    input_type: holding
+    data_type: uint16
+    scale: 0.01
+    unit_of_measurement: "A"
+    device_class: current
+
+  - name: "L1 Power"
+    slave: 1
+    address: 0x1003
+    input_type: holding
+    data_type: int32
+    scale: 0.1
+    unit_of_measurement: "W"
+    device_class: power
+
+  - name: "L1 Frequency"
+    slave: 1
+    address: 0x1005
+    input_type: holding
+    data_type: uint16
+    scale: 0.01
+    unit_of_measurement: "Hz"
+    device_class: frequency
+
+  - name: "L2 Voltage"
+    slave: 1
+    address: 0x1006
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    unit_of_measurement: "V"
+    device_class: voltage
+
+  - name: "L2 Current"
+    slave: 1
+    address: 0x1007
+    input_type: holding
+    data_type: uint16
+    scale: 0.01
+    unit_of_measurement: "A"
+    device_class: current
+
+  - name: "L2 Power"
+    slave: 1
+    address: 0x1008
+    input_type: holding
+    data_type: int32
+    scale: 0.1
+    unit_of_measurement: "W"
+    device_class: power
+
+  - name: "L2 Frequency"
+    slave: 1
+    address: 0x100A
+    input_type: holding
+    data_type: uint16
+    scale: 0.01
+    unit_of_measurement: "Hz"
+    device_class: frequency
+
+  - name: "L3 Voltage"
+    slave: 1
+    address: 0x100B
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    unit_of_measurement: "V"
+    device_class: voltage
+
+  - name: "L3 Current"
+    slave: 1
+    address: 0x100C
+    input_type: holding
+    data_type: uint16
+    scale: 0.01
+    unit_of_measurement: "A"
+    device_class: current
+
+  - name: "L3 Power"
+    slave: 1
+    address: 0x100D
+    input_type: holding
+    data_type: int32
+    scale: 0.1
+    unit_of_measurement: "W"
+    device_class: power
+#        scan_interval: 5
+
+  - name: "L3 Frequency"
+    slave: 1
+    address: 0x100F
+    input_type: holding
+    data_type: uint16
+    scale: 0.01
+    unit_of_measurement: "Hz"
+    device_class: frequency
+
+  - name: "MPPT1 Voltage"
+    slave: 1
+    address: 0x1010
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    unit_of_measurement: "V"
+    device_class: voltage
+
+  - name: "MPPT1 Current"
+    slave: 1
+    address: 0x1011
+    input_type: holding
+    data_type: uint16
+    scale: 0.01
+    unit_of_measurement: "A"
+    device_class: current
+
+  - name: "MPPT1 Power"
+    slave: 1
+    address: 0x1012
+    input_type: holding
+    data_type: uint32
+    scale: 0.1
+    unit_of_measurement: "W"
+    device_class: power
+    scan_interval: 1
+
+  - name: "MPPT2 Voltage"
+    slave: 1
+    address: 0x1014
+    input_type: holding
+    data_type: uint16
+    scale: 0.1
+    unit_of_measurement: "V"
+    device_class: voltage
+
+  - name: "MPPT2 Current"
+    slave: 1
+    address: 0x1015
+    input_type: holding
+    data_type: uint16
+    scale: 0.01
+    unit_of_measurement: "A"
+    device_class: current
+
+  - name: "MPPT2 Power"
+    slave: 1
+    address: 0x1016
+    input_type: holding
+    data_type: uint32
+    scale: 0.1
+    unit_of_measurement: "W"
+    device_class: power
+    scan_interval: 1
+
+#      - name: "MPPT3 Voltage"
+#        slave: 1
+#        address: 0x1018
+#        input_type: holding
+#        data_type: uint16
+#        scale: 0.1
+#        unit_of_measurement: "V"
+#        device_class: voltage
+
+
+
+
+
+
+
+
+
+
+#      - name: "MPPT3 Current"
+#        slave: 1
+#        address: 0x1019
+#       input_type: holding
+#        data_type: uint16
+#        scale: 0.01
+#        unit_of_measurement: "A"
+#        device_class: current
+
+#      - name: "MPPT3 Power"
+#        slave: 1
+#        address: 0x101A
+#        input_type: holding
+#        data_type: uint32
+#        scale: 0.1
+#        unit_of_measurement: "W"
+#      scan_interval: 1
+#        device_class: power
+
+  - name: "Inner Temperature"
+    slave: 1
+    address: 0x101C
+    input_type: holding
+    data_type: int16
+    unit_of_measurement: "°C"
+    device_class: temperature
+
+#      - name: "Inverter Mode"
+#        slave: 1
+#        address: 0x101D
+#        input_type: holding
+#        data_type: uint16
+#        device_class: "enum"
+
+#      - name: "Error Code1"
+#        slave: 1
+#        address: 0x101E
+#        input_type: holding
+#        data_type: uint16
+    
+
+#      - name: "Error Code2"
+#        slave: 1
+#        address: 0x101F
+#        input_type: holding
+#        data_type: uint16
+    
+
+#      - name: "Error Code3"
+#        slave: 1
+#        address: 0x1020
+#        input_type: holding
+#        data_type: uint16
+    
+
+  - name: "Total Energy"
+    slave: 1
+    address: 0x1021
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "kWh"
+    device_class: energy
+    state_class: total_increasing
+
+#      - name: "Total Generation Time"
+#        slave: 1
+#        address: 0x1023
+#        input_type: holding
+#        data_type: uint32
+#        unit_of_measurement: "h"
+#        device_class: duration
+
+  - name: "AVRII Today Energy"
+    unique_id: avrii_today_energy
+    slave: 1
+    address: 0x1027
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "Wh"
+    device_class: energy
+    state_class: total_increasing
+
+  - name: "nie wiem"
+    unique_id: nie_wiem
+    slave: 1
+    address: 0x1027
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "Wh"
+    device_class: energy
+    state_class: total_increasing
+    
+    
+    
+  - name: "Grid Total Active Power"
+    slave: 1
+    address: 0x1037
+    input_type: holding
+    data_type: int32
+    scale: 0.1
+    unit_of_measurement: "W"
+#        scan_interval: 1
+    device_class: power
+
+#      - name: "Grid Total Reactive Power"
+#        slave: 1
+#        address: 0x1039
+#        input_type: holding
+#        data_type: int32
+#        scale: 0.1
+#        unit_of_measurement: "var"
+#        scan_interval: 1
+#        device_class: reactive_power
+
+  - name: "PV Today Peak Power"
+    slave: 1
+    address: 0x103B
+    input_type: holding
+    data_type: int32
+    scale: 0.1
+    unit_of_measurement: "W"
+    device_class: power
+
+#      - name: "Power Factor"
+#        slave: 1
+#        address: 0x103D
+#        input_type: holding
+#        data_type: int16
+#        scale: 0.001
+#        unit_of_measurement: ""
+#        device_class: power_factor
+
+#      - name: "MPPT4 Voltage"
+#        slave: 1
+#        address: 0x103E
+#        input_type: holding
+#        data_type: uint16
+#        scale: 0.1
+#        unit_of_measurement: "V"
+#        device_class: voltage
+
+#      - name: "MPPT4 Current"
+#        slave: 1
+#        address: 0x103F
+#        input_type: holding
+#        data_type: uint16
+#        scale: 0.01
+#        unit_of_measurement: "A"
+#        device_class: current
+
+#      - name: "MPPT4 Power"
+#        slave: 1
+#        address: 0x1040
+#        input_type: holding
+#        data_type: uint32
+#        scale: 0.1
+#        unit_of_measurement: "W"
+#        scan_interval: 1
+#        device_class: power
+
+  - name: "Total PV Power"
+    slave: 1
+    address: 0x1048
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "W"
+    scale: 0.1
+    precision: 1
+    scan_interval: 1
+    device_class: power
+
+  - name: "System Work Status"
+    slave: 1
+    address: 0x104A
+    input_type: holding
+    data_type: uint16
+#        unit_of_measurement: "Status"
+#        device_class: "enum"
+
+
+
+#      - name: "MPPT5 Voltage"
+#        slave: 1
+#        address: 0x1080
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "V"
+#        scale: 0.1
+#        precision: 1
+#        device_class: voltage
+
+#      - name: "MPPT5 Current"
+#        slave: 1
+#        address: 0x1081
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "A"
+#        scale: 0.01
+#        precision: 2
+#        device_class: current
+
+#      - name: "MPPT5 Power"
+#        slave: 1
+#        address: 0x1082
+#        input_type: holding
+#        data_type: uint32
+#        unit_of_measurement: "W"
+#        scale: 0.1
+#        precision: 1
+#        device_class: power
+
+#      - name: "MPPT6 Voltage"
+#        slave: 1
+#        address: 0x1084
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "V"
+#        scale: 0.1
+#        precision: 1
+#        device_class: voltage
+
+#      - name: "MPPT6 Current"
+#        slave: 1
+#        address: 0x1085
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "A"
+#        scale: 0.01
+#        precision: 2
+#        device_class: current
+
+#      - name: "MPPT6 Power"
+#        slave: 1
+#        address: 0x1086
+#        input_type: holding
+#        data_type: uint32
+#        unit_of_measurement: "W"
+#        scale: 0.1
+#        precision: 1
+#        device_class: power
+
+#      - name: "MPPT7 Voltage"
+#        slave: 1
+#        address: 0x1088
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "V"
+#        scale: 0.1
+#        precision: 1
+#        device_class: voltage
+
+#      - name: "MPPT7 Current"
+#        slave: 1
+#        address: 0x1089
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "A"
+#        scale: 0.01
+#        precision: 2
+#        device_class: current
+
+#      - name: "MPPT7 Power"
+#        slave: 1
+#        address: 0x108A
+#        input_type: holding
+#        data_type: uint32
+#        unit_of_measurement: "W"
+#        scale: 0.1
+#        precision: 1
+#        device_class: power
+
+#      - name: "MPPT8 Voltage"
+#        slave: 1
+#        address: 0x108C
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "V"
+#        scale: 0.1
+#        precision: 1
+#        device_class: voltage
+
+#      - name: "MPPT8 Current"
+#        slave: 1
+#        address: 0x108D
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "A"
+#        scale: 0.01
+#        precision: 2
+#        device_class: current
+
+#      - name: "MPPT8 Power"
+#        slave: 1
+#        address: 0x108E
+#        input_type: holding
+#        data_type: uint32
+#        unit_of_measurement: "W"
+#        scale: 0.1
+#        precision: 1
+#        device_class: power
+
+
+
+
+
+
+
+
+
+#      - name: "String 6 Energy Today"
+#        slave: 1
+#        address: 0x10C6
+#        input_type: holding
+#        data_type: uint32
+#        unit_of_measurement: "Wh"
+#        device_class: energy
+#        state_class: total_increasing
+
+#      - name: "String 7 Energy Total"
+#        slave: 1
+#        address: 0x10C8
+#        input_type: holding
+#        data_type: uint32
+#        unit_of_measurement: "kWh"
+#        device_class: energy
+#        state_class: total
+
+#      - name: "String 7 Energy Today"
+#        slave: 1
+#        address: 0x10CA
+#        input_type: holding
+#        data_type: uint32
+#        unit_of_measurement: "Wh"
+#        device_class: energy
+#        state_class: total_increasing
+
+#      - name: "String 8 Energy Total"
+#        slave: 1
+#        address: 0x10CC
+#        input_type: holding
+#        data_type: uint32
+#        unit_of_measurement: "kWh"
+#        device_class: energy
+#        state_class: total
+
+#      - name: "String 8 Energy Today"
+#        slave: 1
+#        address: 0x10CE
+#        input_type: holding
+#        data_type: uint32
+#        unit_of_measurement: "Wh"
+#        device_class: energy
+#        state_class: total_increasing
+
+  - name: "L1 Watt of Grid"
+    slave: 1
+    address: 0x1300
+    input_type: holding
+    data_type: int32
+    unit_of_measurement: "W"
+    scale: 0.1
+    precision: 1
+    device_class: power
+    scan_interval: 1
+
+  - name: "L2 Watt of Grid"
+    slave: 1
+    address: 0x1302
+    input_type: holding
+    data_type: int32
+    unit_of_measurement: "W"
+    scale: 0.1
+    precision: 1
+    device_class: power
+    scan_interval: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  - name: "L3 Watt of Grid"
+    slave: 1
+    address: 0x1304
+    input_type: holding
+    data_type: int32
+    unit_of_measurement: "W"
+    scale: 0.1
+    precision: 1
+    device_class: power
+    scan_interval: 1
+
+  - name: "Accumulated Energy of Import"
+    slave: 1
+    address: 0x1306
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "kWh"
+    scale: 0.001
+    state_class: total_increasing
+    device_class: energy
+
+  - name: "Accumulated Energy of Export"
+    slave: 1
+    address: 0x1308
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "kWh"
+    scale: 0.001
+    state_class: total_increasing
+    device_class: energy
+
+  - name: "L1 Watt of Load"
+    slave: 1
+    address: 0x130A
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "W"
+    scale: 0.1
+    device_class: power
+    scan_interval: 1
+
+  - name: "L2 Watt of Load"
+    slave: 1
+    address: 0x130C
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "W"
+    scale: 0.1
+    device_class: power
+    scan_interval: 1
+
+  - name: "L3 Watt of Load"
+    slave: 1
+    address: 0x130E
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "W"
+    scale: 0.1
+    device_class: power
+    scan_interval: 1
+
+  - name: "Accumulated Energy of Load"
+    slave: 1
+    address: 0x1310
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "Wh"
+    state_class: total_increasing
+    device_class: energy
+
+  - name: "L1-N Phase Voltage of Grid"
+    slave: 1
+    address: 0x131A
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+#        scan_interval: 1
+
+  - name: "L2-N Phase Voltage of Grid"
+    slave: 1
+    address: 0x131B
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+#        scan_interval: 1
+
+  - name: "L3-N Phase Voltage of Grid"
+    slave: 1
+    address: 0x131C
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+#        scan_interval: 1
+
+  - name: "L1 Current of Grid"
+    slave: 1
+    address: 0x131D
+    input_type: holding
+    data_type: int32
+    unit_of_measurement: "A"
+    scale: 0.01
+    device_class: current
+
+  - name: "L2 Current of Grid"
+    slave: 1
+    address: 0x131F
+    input_type: holding
+    data_type: int32
+    unit_of_measurement: "A"
+    scale: 0.01
+    device_class: current
+
+  - name: "L3 Current of Grid"
+    slave: 1
+    address: 0x1321
+    input_type: holding
+    data_type: int32
+    unit_of_measurement: "A"
+    scale: 0.01
+    device_class: current
+
+  - name: "L1-N Phase Voltage of Load"
+    slave: 1
+    address: 0x1323
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+
+  - name: "L2-N Phase Voltage of Load"
+    slave: 1
+    address: 0x1324
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+
+  - name: "L3-N Phase Voltage of Load"
+    slave: 1
+    address: 0x1325
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+
+  - name: "L1 Current of Load"
+    slave: 1
+    address: 0x1326
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "A"
+    scale: 0.01
+    device_class: current
+
+  - name: "L2 Current of Load"
+    slave: 1
+    address: 0x1328
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "A"
+    scale: 0.01
+    device_class: current
+
+  - name: "L3 Current of Load"
+    slave: 1
+    address: 0x132A
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "A"
+    scale: 0.01
+    device_class: current
+
+  - name: "Today Import Energy"
+    slave: 1
+    address: 0x1332
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "kWh"
+    state_class: total_increasing
+    device_class: energy
+    scale: 0.01
+    precision: 2
+
+  - name: "Today Export Energy"
+    slave: 1
+    address: 0x1334
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "kWh"
+    state_class: total_increasing
+    device_class: energy
+    scale: 0.01
+    precision: 2
+
+  - name: "Today Load Energy"
+    slave: 1
+    address: 0x1336
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "kWh"
+    state_class: total_increasing
+    device_class: energy
+    scale: 0.01
+    precision: 2
+
+  - name: "Frequency of Grid"
+    slave: 1
+    address: 0x1338
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "Hz"
+    scale: 0.01
+    device_class: frequency
+
+  - name: "L1 Voltage of Backup"
+    slave: 1
+    address: 0x1350
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+
+  - name: "L1 Current of Backup"
+    slave: 1
+    address: 0x1351
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "A"
+    scale: 0.01
+    device_class: current
+
+  - name: "L1 Watt of Backup"
+    slave: 1
+    address: 0x1353
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "W"
+    scale: 0.1
+    device_class: power
+
+  - name: "Frequency of Backup"
+    slave: 1
+    address: 0x1355
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "Hz"
+    scale: 0.01
+    device_class: frequency
+
+  - name: "L2 Voltage of Backup"
+    slave: 1
+    address: 0x1356
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+
+  - name: "L2 Current of Backup"
+    slave: 1
+    address: 0x1357
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "A"
+    scale: 0.01
+    device_class: current
+
+  - name: "L2 Watt of Backup"
+    slave: 1
+    address: 0x1359
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "W"
+    scale: 0.1
+    device_class: power
+
+  - name: "L3 Voltage of Backup"
+    slave: 1
+    address: 0x135B
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+
+  - name: "L3 Current of Backup"
+    slave: 1
+    address: 0x135C
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "A"
+    scale: 0.01
+    device_class: current
+
+  - name: "L3 Watt of Backup"
+    slave: 1
+    address: 0x135E
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "W"
+    scale: 0.1
+    device_class: power
+
+  - name: "Today Energy to Backup"
+    slave: 1
+    address: 0x1360
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "Wh"
+    state_class: total_increasing
+    device_class: energy
+
+  - name: "Accumulated Energy to Backup"
+    slave: 1
+    address: 0x1362
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "Wh"
+    state_class: total_increasing
+    device_class: energy
+
+  - name: "Battery SOC"
+    slave: 1
+    address: 0x2000
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "%"
+    device_class: battery
+
+
+  - name: "Battery Temperature"
+    slave: 1
+    address: 0x2001
+    input_type: holding
+    data_type: int16
+    unit_of_measurement: "°C"
+    device_class: temperature
+
+  - name: "Battery Voltage"
+    slave: 1
+    address: 0x2006
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+
+  - name: "Battery Current"
+    slave: 1
+    address: 0x2007
+    input_type: holding
+    data_type: int32
+    unit_of_measurement: "A"
+    scale: 0.01
+    device_class: current
+
+  - name: "Battery Power"
+    slave: 1
+    address: 0x2009
+    input_type: holding
+    data_type: int32
+    unit_of_measurement: "W"
+    scale: 0.1
+    device_class: power
+    scan_interval: 1
+
+  - name: "Battery Today Charge Energy"
+    slave: 1
+    address: 0x200B
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "kWh"
+    device_class: energy
+    state_class: total_increasing
+    scale: 0.01
+    precision: 2
+
+  - name: "Battery Accumulated Charge Energy"
+    slave: 1
+    address: 0x200D
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "Wh"
+    device_class: energy
+    state_class: total_increasing
+    
+  - name: "Battery Today Discharge Energy"
+    slave: 1
+    address: 0x200F
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "kWh"
+    device_class: energy
+    state_class: total_increasing
+    scale: 0.01
+    precision: 2
+    
+  - name: "Battery Accumulated Discharge Energy"
+    slave: 1
+    address: 0x2011
+    input_type: holding
+    data_type: uint32
+    unit_of_measurement: "Wh"
+    device_class: energy
+    state_class: total_increasing
+    
+#      - name: "Error Message 4"
+#        slave: 1
+#        address: 0x2013
+#        input_type: holding
+#        data_type: uint16
+#        unit_of_measurement: "Error Code Table 4"
+
+  - name: "Battery Maximum Cell Voltage"
+    slave: 1
+    address: 0x2017
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+
+#      - name: "Battery Smallest Module Number of Maximum Cell Voltage"
+#        slave: 1
+#        address: 0x2018
+#        input_type: holding
+#        data_type: uint16
+
+  - name: "Battery Minimum Cell Voltage"
+    slave: 1
+    address: 0x2019
+    input_type: holding
+    data_type: uint16
+    unit_of_measurement: "V"
+    scale: 0.1
+    device_class: voltage
+
+#      - name: "Battery Smallest Module Number of Minimum Cell Voltage"
+#        slave: 1
+#        address: 0x201A
+#        input_type: holding
+#        data_type: uint16
+
+  - name: "Battery Average Cell Temperature"
+    slave: 1
+    address: 0x201B
+    input_type: holding
+    data_type: int16
+    unit_of_measurement: "°C"
+    device_class: temperature
+
+#      - name: "Battery Maximum Cell Temperature"
+#        slave: 1
+#        address: 0x201C
+#        input_type: holding
+#        data_type: int16
+#        unit_of_measurement: "°C"
+#        device_class: temperature
+
+#      - name: "Battery Minimum Cell Temperature"
+#        slave: 1
+#        address: 0x201E
+#        input_type: holding
+#        data_type: int16
+#        unit_of_measurement: "°C"
+#        device_class: temperature
