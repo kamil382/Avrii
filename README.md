@@ -1,3 +1,9 @@
+## Dashboard
+
+![Dashboard AVRII](images/Avrii1.png)
+
+
+
 # AVRII Modbus Inverter iHomeTech Edition
 
 Integracja falowników AVRII z Home Assistant przez Modbus TCP.
