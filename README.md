@@ -1,8 +1,8 @@
 ## Dashboard
 
 ![Dashboard AVRII](images/avrii1.png)
-
-
+![Dashboard AVRII](images/avrii2.png)
+![Dashboard AVRII](images/avrii3.png)
 
 # AVRII Modbus Inverter iHomeTech Edition
 
