@@ -1,6 +1,6 @@
 ## Dashboard
 
-![Dashboard AVRII](images/Avrii1.png)
+![Dashboard AVRII](images/avrii1.png)
 
 
 
